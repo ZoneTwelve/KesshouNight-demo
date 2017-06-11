@@ -1,0 +1,123 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>木棉手札 - 夜校demo</title>
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css" />
+<style>
+#headers{
+	height:200px;
+	background:url('https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fpic.pimg.tw%2Fgishileh%2F4b9b0d5381caa.jpg&f=1');
+	background-size:cover;
+}
+.center{
+	text-align:center;
+}.marauto{
+	margin:0 auto;
+}
+#header-icon{
+	height:150px;
+	width:100%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}#icon{
+	font-size:40px;
+	background:rgb(255, 160, 55);
+	color:white;
+	height: 90px;
+	width: 90px;
+	line-height: 90px;
+	text-align: center;
+	border: 2px solid;
+	border-radius: 45px;
+	box-shadow: 5px 5px 5px #888888;
+}#information{
+	width:100%;
+	height:auto;
+	background:white;
+	padding:10px 10px;
+}
+.left{
+	float:left;
+}.middle{
+	float:center;
+}.right{
+	float:right;
+}
+.tleft{
+	text-align:left;
+}
+
+.w30{
+	width:33%;
+}.w90{
+	width:90%;
+}
+.de{
+	background:rgb(200,200,200);
+}
+</style>
+<script src="request.js"></script>
+</head>
+<body class="jumbotron">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="navbar-inner"> <!--changes made here-->
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+          
+		  <a class="navbar-brand" href="#">
+                <img src="kesshou.png" width="50px" height="50px" alt="logo">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="#">Kesshou</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="javascript:document.logout.submit()">登出</a>
+					<form name="logout" action="/user"method="post">
+						<input type="hidden" name="logout" value="1"/>
+						<input type="hidden" name="key" value="<%=key%>"/>
+					</form>
+				</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</nav>
+<div id="headers" class="jumbotron">
+	<div id="header-icon">
+		<div id="icon">H</div>
+	</div>
+	<div id="information" class="center marauto">
+		<ul class="list-inline lead">
+		  <li class="w30 list-inline-item left"><sub>用戶組</sub><br /><b id="class">Student</b></li>
+		  <li class="w30 list-inline-item"><sub>姓名</sub><br /><b id="name">姓名</b></li>
+		  <li class="w30 list-inline-item right"><sub>英文名</sub><br /><b id="ename">英文姓名</b></li>
+		</ul>
+	</div>
+	<br />
+	<div class="w90 center marauto">
+		<ul class="list-group tleft lead">
+			<li class="list-group-item"><span class="glyphicon glyphicon-th-list"></span> 出勤紀錄 <span class="glyphicon glyphicon-chevron-right"></span></li>
+			<li class="list-group-item"><span class="glyphicon glyphicon-list-alt"> </span> 獎懲紀錄 <span class="glyphicon glyphicon-chevron-right"></span></li>
+			<a href="/?get=result"><li class="list-group-item"><span class="glyphicon glyphicon-file"></span> 學期成績 <span class="glyphicon glyphicon-chevron-right"></span></li></a>
+		</ul>
+	</div>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+</html>

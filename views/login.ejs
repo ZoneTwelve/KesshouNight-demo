@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- <link rel="icon" href="/favicon.ico"> -->
+<title>木棉手札 - 夜間部demo</title>
+<link href="bootstrap.min.css" rel="stylesheet">
+<link href="signin.css" rel="stylesheet">
+<link rel="stylesheet" href="login.style.css" />
+</head>
+<body>
+<div class="container">
+	<form class="form-signin" action="/user" method="POST">
+		<h2 class="form-signin-heading">
+			<img src="kesshou.png" alt="kesshou logo" style="max-width:40px;" />
+			木棉手札 - 夜間部 demo
+		</h2>
+		<label for="account" class="sr-only">
+			學號
+		</label>
+		<input type="account" name="acc" id="account" class="form-control"
+		placeholder="學號" required autofocus>
+		<label for="password" class="sr-only">
+			密碼
+		</label>
+		<input type="password" name="pwd" id="password" class="form-control"
+		placeholder="密碼(身份證字號)" required>
+		<button class="btn btn-lg btn-primary btn-block" type="submit">
+			登入
+		</button>
+	</form>
+</div>
+<script src="/ie10-viewport-bug-workaround.js">
+</script>
+</body>
+</html>

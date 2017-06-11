@@ -1,0 +1,102 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>木棉手札 - 夜校demo</title>
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css" />
+<style>
+.center{
+	text-align:center;
+}.marauto{
+	margin:0 auto;
+}
+.left{
+	float:left;
+}.middle{
+	float:center;
+}.right{
+	float:right;
+}
+.tleft{
+	text-align:left;
+}
+
+#main{
+	position:relative;
+	top:60px;
+}
+#control{
+	z-index:1;
+	position:fixed;
+	top:0px;
+	width:100%;
+	padding:10px;
+	color:white;
+	background:ghostwhite;
+}
+#leave{
+	transition-duration: 0.3s;
+}#leave:hover{
+	margin-left:-5px;
+}
+
+.listnone{
+	list-style-type:none;
+}
+.w30{
+	width:33%;
+}.w90{
+	width:90%;
+}
+#resultview{
+	display:none;
+}
+table, th, td {
+	padding:5px;
+	border: 1px solid black;
+}
+.debug{
+	background:rgb(200, 200, 200);
+}
+</style>
+<script src="request.result.js"></script>
+</head>
+<body>
+<ul id="control" class="list-inline marauto" style="font-size:24px;">
+	<li id="leave" class="left"><a href="/" style="color:black;"><span class="glyphicon glyphicon-chevron-left">返回</span></a></li>
+	<!--li class="right">temp</li-->
+</ul>
+<div id="main" class="marauto w90">
+	<h1 id="load">請稍候...</h1>
+	<div id="resultview" class="lead">
+		<h1 id="sel">
+			<select name="" id="selectYearResult">
+				<option value="">選擇年次</option>
+				<option value="1">一年級</option>
+				<option value="2">二年級</option>
+				<option value="3">三年級</option>
+				<option value="4">四年級</option>
+			</select>
+			學年成績
+		</h1>
+		<table id="view">
+			<tr>
+				<td>科目</td>
+				<td>必/選 修</td>
+				<td>學分</td>
+				<td>成績</td>
+				<td>必/選 修</td>
+				<td>學分</td>
+				<td>成績</td>
+				<td>總平均</td>
+			</tr>
+		</table>
+	</div>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+</html>
