@@ -19,7 +19,7 @@ function login(acc, pwd, callback){
 	}
 	request.post(options, function(e, r, d){
 		let result = new Object()
-		if(e||!d)return callback(setError(result, "GET fundamental error", e, 404))
+		if(e||!d)return callback(setError(result, "can not connect to school's server", e, 404))
 
 		var html = iconv.decode(d, "Big5")
 
